@@ -1,0 +1,13 @@
+# /etc/libvirt/libvirtd.conf — relevant settings
+#
+# Only the lines you need to change are listed here.
+# The rest of the file can stay at defaults.
+
+# Allow the libvirt group to manage VMs
+unix_sock_group = "libvirt"
+
+# Read-only socket permissions (open to all users)
+unix_sock_ro_perms = "0777"
+
+# Read-write socket permissions (libvirt group only)
+unix_sock_rw_perms = "0770"
